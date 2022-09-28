@@ -1,0 +1,104 @@
+/* .App {
+  text-align: center;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* self coded css */
+
+.firstchild_nav {
+  border: 1px solid black;
+  height: 48px;
+  text-align: center;
+  color: white;
+  background-color: #1F1F1F;
+}
+
+.secondchild_nav {
+  border: 1px solid black;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.secondchild_nav_img img {
+  width: 140px;
+  height: 50px;
+}
+
+.secondchild_nav_allCat {
+  display: flex;
+  /* border: 1px solid black; */
+  width: 480px;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.secondchild_nav_allCat_link {
+  text-decoration: none;
+  color: black;
+}
+
+.secondchild_nav_allCat_link:hover {
+  color: rgb(216, 83, 105);
+}
+
+.secondchild_nav_profiles {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 210px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.secondchild_nav_profiles img {
+  height: 18px;
+  width: 18px;
+}
+
+.hm_fstDiv {
+  border: 1px solid black;
+  height: 440px;
+}
+
+.hm_fstDiv img {
+  width: 100%;
+  height: 100%;
+}
