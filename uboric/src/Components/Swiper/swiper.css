@@ -1,0 +1,13 @@
+.swip {
+    display: inline-block;
+    /* background-color: #eff0f1; */
+    padding: 10px;
+}
+
+.swip:hover {
+    color: #FF7264
+}
+
+.scroll {
+    color: #FF7264;
+}

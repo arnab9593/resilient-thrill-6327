@@ -1,5 +1,5 @@
 .hm_fstDiv {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 440px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .hp_secondDiv {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 400px;
     padding: 20px;
     display: flex;
@@ -85,8 +85,8 @@
 }
 
 .hp_shopByCat {
-    border: 1px solid black;
-    height: 350px;
+    /* border: 1px solid black; */
+    height: 230px;
     text-align: center;
     margin-top: 20px;
 
@@ -101,22 +101,24 @@
 .hp_shopByCat_link {
     font-size: 1.2rem;
     font-weight: 300;
-    color: rgb(216, 83, 105);
+    color: #FF7264;
     text-decoration: underline;
 }
 
 .hp_shopByCat div {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 1100px;
     margin: auto auto;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 10px;
-    margin-top: 50px;
+    margin-top: 27px;
+    font-size: large;
+    font-weight: 600;
 }
 
 .hp_fourDiv {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 1000px;
     display: grid;
     grid-template-columns: auto auto;

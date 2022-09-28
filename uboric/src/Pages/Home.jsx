@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import Slider from "../Components/Slider/Slider"
 import "../Pages/CSS/Homepage.css"
-
+import { SwiperFunc } from "../Components/Swiper/Swiper"
+import { BestSellingProduct } from "../Components/Swiper/Swiper"
 const Home = () => {
     return (
         <>
@@ -26,20 +27,7 @@ const Home = () => {
                 <div className="hp_shopByCat">
                     <h2>Shop By Category</h2>
                     <Link to='/' className="hp_shopByCat_link">Clothing</Link>
-                    <div>
-                        <p>Men's Fashion</p>
-                        <p>Shirt & boxer</p>
-                        <p>T-shirt</p>
-                        <p>Trunk & Briefs</p>
-                        <p>Shirts</p>
-                        <p>Women's Fashion</p>
-                        <p>Western Wear</p>
-                        <p>TUNICS</p>
-                        <p>Dresses</p>
-                        <p>Daywear</p>
-                        <p>Jeans</p>
-                        <p>Essentials & Nightwear</p>
-                    </div>
+                    <SwiperFunc></SwiperFunc>
                 </div>
                 <div className="hp_fourDiv">
                     <div>
@@ -59,6 +47,8 @@ const Home = () => {
                         <img src="https://www.krishnajewellers.com/blog/wp-content/uploads/2021/07/RV_10-1100x734.jpg"></img>
                     </div>
                 </div>
+
+                <BestSellingProduct></BestSellingProduct>
             </div>
         </>
     )
