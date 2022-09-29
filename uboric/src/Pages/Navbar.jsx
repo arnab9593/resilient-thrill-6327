@@ -60,6 +60,7 @@ const Navbar = () => {
                             <DrawerBody>
                                 <Input placeholder='Username' />
                                 <Input placeholder='Password' />
+                                
                             </DrawerBody>
 
                             <DrawerFooter>
