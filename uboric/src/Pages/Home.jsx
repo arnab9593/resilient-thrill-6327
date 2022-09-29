@@ -4,6 +4,7 @@ import "../Pages/CSS/Homepage.css"
 import { NewArrivals, SwiperFunc } from "../Components/Swiper/Swiper"
 import { BestSellingProduct } from "../Components/Swiper/Swiper"
 import { Button } from "@chakra-ui/react"
+import Footer from "./Footer"
 const Home = () => {
     return (
         <>
@@ -70,6 +71,7 @@ const Home = () => {
                         <img src="https://www.uboric.com/wp-content/uploads/2022/08/61OR0aPLJAL._SL1500_-670x575.jpg" alt="" />
                     </div>
                 </div>
+                <Footer></Footer>
             </div>
         </>
     )
