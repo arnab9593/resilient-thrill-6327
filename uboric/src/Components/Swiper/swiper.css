@@ -45,9 +45,47 @@
     transform: scale(1.1);
 }
 
-.bestSellingPrd_sliderh1{
+.bestSellingPrd_sliderh1 {
     text-align: center;
     font-size: 40px;
     color: #FF7264;
 }
 
+
+.NewArrivals_slider {
+    /* width: 1400px; */
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    /* gap: 5px; */
+    margin-bottom: 30px;
+    font-size: medium;
+    font-weight: 300;
+    justify-content: center;
+    line-height: 20px;
+    padding: 20px;
+}
+
+.NewArrivals_slider img {
+    height: 290px;
+    width: 290px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.NewArrivals_slider2 {
+    padding: 20px;
+    transition: transform .5s;
+    /* align-items: center; */
+}
+
+.NewArrivals_slider2:hover {
+    transform: scale(1.2);
+}
+
+.NewArrivals_sliderh1 {
+    text-align: center;
+    font-size: 40px;
+    color: #FF7264;
+}

@@ -70,4 +70,45 @@ const BestSellingProduct = () => {
     )
 }
 
-export { SwiperFunc, BestSellingProduct }
+
+const NewArrivals = () => {
+    const getData = () => {
+        return axios.get('https://intense-journey-23599.herokuapp.com/api/home')
+    }
+    const [data, getdatafromApi] = React.useState([]);
+
+    React.useEffect(() => {
+        getData().then((res) => getdatafromApi(res.data));
+    }, []);
+    console.log(data);
+    return (
+        <>
+            <h1 className="NewArrivals_sliderh1">New Arrivals</h1>
+            <div className="NewArrivals_slider">
+                <Swiper
+                    spaceBetween={4}
+                    slidesPerView={4}
+
+                    scrollbar={{ draggable: true }}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    {data.map((item) => (
+                        <>
+                            <SwiperSlide className="NewArrivals_slider2" key={item.id}>
+                                <img src={item.image}></img>
+                            </SwiperSlide>
+                        </>
+
+                    ))}
+                </Swiper >
+            </div>
+        </>
+    )
+}
+
+
+
+
+
+export { SwiperFunc, BestSellingProduct, NewArrivals }

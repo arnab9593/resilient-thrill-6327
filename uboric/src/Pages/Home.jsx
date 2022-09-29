@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Slider from "../Components/Slider/Slider"
 import "../Pages/CSS/Homepage.css"
-import { SwiperFunc } from "../Components/Swiper/Swiper"
+import { NewArrivals, SwiperFunc } from "../Components/Swiper/Swiper"
 import { BestSellingProduct } from "../Components/Swiper/Swiper"
 const Home = () => {
     return (
@@ -49,6 +49,7 @@ const Home = () => {
                 </div>
 
                 <BestSellingProduct></BestSellingProduct>
+                <NewArrivals></NewArrivals>
             </div>
         </>
     )
