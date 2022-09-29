@@ -50,7 +50,6 @@ const BestSellingProduct = () => {
                 <Swiper
                     spaceBetween={4}
                     slidesPerView={4}
-
                     scrollbar={{ draggable: true }}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}

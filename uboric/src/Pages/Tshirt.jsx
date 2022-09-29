@@ -1,7 +1,9 @@
-import { Button, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, GridItem, Heading, Menu, MenuButton, MenuItem, MenuList, Text, Select } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./CSS/Tshirt.css"
+import Footer from "./Footer"
+import Sidebar from "./Sidebar";
 
 
 const getData = () => {
@@ -16,31 +18,37 @@ const Tshirt = () => {
         getData().then((res) => getDataFromApi(res.data))
     }, [])
 
+
+
     return (
         <div>
-            <div className="tshirt_firstDiv">
-                <Text className="text">T-shirts</Text>
-                <Menu >
-                    <MenuButton as={Button} className="filter" borderRadius="0">
-                        Actions
-                    </MenuButton>
-                    <MenuList>
-                        <MenuItem>Download</MenuItem>
-                        <MenuItem>Create a Copy</MenuItem>
-                        <MenuItem>Mark as Draft</MenuItem>
-                        <MenuItem>Delete</MenuItem>
-                        <MenuItem>Attend a Workshop</MenuItem>
-                    </MenuList>
-                </Menu>
-            </div>
-            <div className="container">
-                {data.map((item) => (
-                    <div key={item.id}>
-                        <img src={item.image}></img>
-                    </div>
-                ))}
-            </div>
+            <Flex >
+                <Sidebar />
+                <Box>
+                    <Box display="flex" justifyContent="space-between" marginBottom="20px" mt="30px">
+                        <Heading  ml="180px">T-shirts</Heading>
+                        <Select placeholder='Default' w="250px">
+                            <option value='option1'>Option 1</option>
+                            <option value='option2'>Option 2</option>
+                            <option value='option3'>Option 3</option>
+                        </Select>
+                    </Box>
+                    <Grid templateColumns="repeat(3,1fr)" gap="10px" w="900px" textAlign="center" ml="10px" border="1px solid red" padding="20px">
+                        {data.map((item) => (
+                            <GridItem key={item.id} border="1px solid black" >
+                                <Box w="full">
+                                    <img width="300px" height="300px" src={item.image}></img>
+                                </Box>
+                                <p>{item.name}</p>
+                                <p>{item.price}</p>
+                            </GridItem>
 
+                        ))}
+                    </Grid>
+                </Box>
+
+            </Flex>
+            <Footer></Footer>
         </div>
     )
 }
