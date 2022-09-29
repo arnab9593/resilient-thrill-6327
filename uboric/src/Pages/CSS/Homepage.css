@@ -195,23 +195,69 @@
     padding: 10px;
 }
 
-.hp_description{
+.hp_description {
     /* border: 1px solid black; */
     width: 1110px;
     margin: auto auto;
     text-align: justify;
     padding: 10px;
-    
+
 }
 
-.hp_description h1{
+.hp_description h1 {
     font-size: 33px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-.hp_description p{
+.hp_description p {
     color: #8A8A8A;
 }
 
+.benefitsOfShopping {
+    /* border: 1px solid black; */
+    height: 550px;
+    display: flex;
+    margin-top: 35px;
+}
+
+.benefitsOfShopping1 {
+    /* border: 1px solid red; */
+    width: 50%;
+}
+
+.benefitsOfShopping1 h1 {
+    margin-left: 130px;
+    font-size: 33px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.benefitsOfShopping1 p {
+    margin-left: 130px;
+    line-height: 50px;
+    color: #8A8A8A;
+}
+
+.benefitsOfShopping1 button {
+    margin-left: 128px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.benefitsOfShopping1 button:hover {
+    background-color: #8A8A8A;
+}
+
+.benefitsOfShopping2 {
+    /* border: 1px solid green; */
+    width: 50%;
+}
+
+.benefitsOfShopping2 img{
+    width: 552px;
+    height: 520px;
+}
