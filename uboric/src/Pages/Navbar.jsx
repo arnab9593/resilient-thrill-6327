@@ -21,7 +21,7 @@ const links = [
     { path: "/", title: 'Home ' },
     { path: "/about", title: 'About Us' },
     { path: "/shop", title: 'Shop' },
-    { path: "/categories", title: 'Categories' },
+    { path: "/tshirt", title: 'Categories' },
     { path: "/contactus", title: 'Contact Us' }
 
 ]
