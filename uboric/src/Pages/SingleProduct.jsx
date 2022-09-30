@@ -8,6 +8,8 @@ const getData = (url) => {
     return fetch(url).then((res) => res.json());
 };
 
+const statusFromLS = JSON.parse(localStorage.getItem("loginStatus"))
+console.log(statusFromLS);
 const SingleProduct = () => {
 
     const [qty, setQty] = useState(1)
@@ -57,7 +59,7 @@ const SingleProduct = () => {
                                     <Text fontSize="25px" mt="10px">{qty}</Text>
                                     <Button fontSize="20px" mt="8px" backgroundColor="transparent" onClick={handleInc}>+</Button>
                                 </Box>
-                                <Button mt="18px">Add to Cart</Button>
+                                <Button mt="18px" disabled={statusFromLS == false}>Add to Cart</Button>
                                 <Button mt="18px">Add to Wishlist</Button>
                             </Box>
                             <Text marginTop="20px">Categories: Clothing</Text>

@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom"
+import { json, Link } from "react-router-dom"
 import "../Pages/CSS/Navbar.css"
-import React from "react"
+import React, { useState } from "react"
+import Shop from "./Shop"
 import {
     Drawer,
     DrawerBody,
@@ -12,7 +13,8 @@ import {
     useDisclosure,
     Button,
     Input,
-    Image
+    Image,
+    Alert
 } from '@chakra-ui/react'
 
 
@@ -25,8 +27,82 @@ const links = [
     { path: "/contactus", title: 'Contact Us' }
 
 ]
+const customerDetail = JSON.parse(localStorage.getItem("userData")) || []
+const checkLogin = JSON.parse(localStorage.getItem("loginStatus")) || []
 
 const Navbar = () => {
+
+    const [text, setText] = React.useState({
+        email: "",
+        passwd: "",
+        conPasswd: "",
+    })
+
+    const handleChange = (e) => {
+        const { value, name, type } = e.target;
+        // const newValue = name === "passwd" && "conPasswd" === "passwd" ? value : console.log("Password missmatched")
+
+        setText({ ...text, [name]: value })
+    }
+
+    const [user, setUser] = React.useState(customerDetail)
+
+    const signupUser = () => {
+        setUser([...user, text])
+        setText({
+            email: "",
+            passwd: "",
+            conPasswd: "",
+        })
+    }
+
+    React.useEffect(() => {
+
+        localStorage.setItem("userData", JSON.stringify(user))
+
+    }, [user])
+
+    // console.log(user);
+
+    const [login, setLogin] = useState([])
+
+    const handleLogin = (e) => {
+        const { value, name } = e.target;
+        // console.log(value);
+        setLogin({ ...login, [name]: value })
+    }
+    // console.log(login);
+
+    const [True, setTrue] = useState(checkLogin)
+    React.useEffect(() => {
+        localStorage.setItem("loginStatus", JSON.stringify(True))
+    }, [True])
+    console.log(True);
+    const loginUser = () => {
+        let flag = false;
+        customerDetail.map((data) => {
+            if (data.email === login.username && data.passwd === login.password) {
+                console.log("true");
+                flag = true;
+                return <Shop />
+                // <Home></Home>
+                // alert("Login Sucessful")
+
+            }
+            else {
+                flag = false;
+            }
+        })
+        if (flag) {
+            alert("Login Sucessful")
+            setTrue(flag)
+        }
+        else {
+            alert("Incorrect Credentials")
+            setTrue(flag)
+        }
+    }
+
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
     return (
@@ -58,17 +134,16 @@ const Navbar = () => {
                             <DrawerHeader borderBottomWidth='1px'>Sign in</DrawerHeader>
 
                             <DrawerBody>
-                                <Input placeholder='Username' />
-                                <Input placeholder='Password' />
-                                
+                                <Input placeholder='Username' name="username" value={login.username} onChange={handleLogin} />
+                                <Input placeholder='Password' name="password" value={login.password} onChange={handleLogin} />
+                                <Button onClick={() => loginUser()} >Sign In</Button>
                             </DrawerBody>
-
-                            <DrawerFooter>
-                                <Button variant='outline' mr={3} onClick={onClose}>
-                                    Cancel
-                                </Button>
-                                <Button colorScheme='blue'>Save</Button>
-                            </DrawerFooter>
+                            <DrawerBody>
+                                <Input placeholder='Username' name="email" value={text.email} onChange={handleChange} />
+                                <Input placeholder='Password' name="passwd" value={text.passwd} onChange={handleChange} />
+                                <Input placeholder='Confirm Password' name="conPasswd" value={text.conPasswd} onChange={handleChange} />
+                                <Button onClick={() => signupUser()}>Sign Up</Button>
+                            </DrawerBody>
                         </DrawerContent>
                     </Drawer>
                     <img src="https://cdn-icons-png.flaticon.com/512/535/535285.png" alt="wishlist" />
