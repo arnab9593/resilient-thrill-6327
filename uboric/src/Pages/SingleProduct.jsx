@@ -10,6 +10,7 @@ const getData = (url) => {
 
 const statusFromLS = JSON.parse(localStorage.getItem("loginStatus"))
 console.log(statusFromLS);
+
 const SingleProduct = () => {
 
     const [qty, setQty] = useState(1)

@@ -2,6 +2,7 @@ import { json, Link } from "react-router-dom"
 import "../Pages/CSS/Navbar.css"
 import React, { useState } from "react"
 import Shop from "./Shop"
+import { useNavigate } from "react-router-dom"
 import {
     Drawer,
     DrawerBody,
@@ -78,13 +79,17 @@ const Navbar = () => {
         localStorage.setItem("loginStatus", JSON.stringify(True))
     }, [True])
     console.log(True);
+
+    const navigate = useNavigate();
+
     const loginUser = () => {
         let flag = false;
         customerDetail.map((data) => {
             if (data.email === login.username && data.passwd === login.password) {
                 console.log("true");
                 flag = true;
-                return <Shop />
+
+                // return <Shop />
                 // <Home></Home>
                 // alert("Login Sucessful")
 
@@ -94,6 +99,7 @@ const Navbar = () => {
             }
         })
         if (flag) {
+            navigate("/")
             alert("Login Sucessful")
             setTrue(flag)
         }
