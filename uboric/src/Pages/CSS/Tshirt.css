@@ -1,11 +1,11 @@
 /* .parent{
     display: flex;
-} */
+} 
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 1px solid black;
-    /* width: 900px; */
+    /* width: 900px; 
     margin-left: 450px;
     margin-bottom: 30px;
 }
@@ -28,7 +28,7 @@
     width: 250px;
     padding: 30px;
     border: 1px solid black;
-    /* border-radius: 0px; */
+    border-radius: 0px; 
     background-color: white;
 }
 
@@ -40,7 +40,7 @@
     border: 1px solid black;
     height: 100px;
     width: 415px;
-} */
+} 
 
 .child1{
     border: 1px solid black;
@@ -53,3 +53,13 @@
     height: 500px;
     width: 900px;
 } */
+
+
+
+.imgHover {
+    transition: transform .5s;
+}
+
+.imgHover:hover {
+    transform: scale(1.1);
+}
