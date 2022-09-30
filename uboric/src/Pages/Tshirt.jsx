@@ -9,14 +9,36 @@ import { Link } from "react-router-dom";
 const Tshirt = () => {
 
     const getData = () => {
-        return axios.get("https://intense-journey-23599.herokuapp.com/api/tshirt")
+        return axios.get(`https://intense-journey-23599.herokuapp.com/api/tshirt`)
     }
+
+    const getDataAscDsc = (params = {}) => {
+        return axios.get(`https://intense-journey-23599.herokuapp.com/api/tshirt`, {
+            params: {
+                _sort: params.sort,
+                _order: params.order
+            }
+        }
+
+        )
+    }
+
 
     const [data, getDataFromApi] = useState([])
 
     useEffect(() => {
         getData().then((res) => getDataFromApi(res.data))
     }, [])
+
+
+    const ascending = () => {
+        getDataAscDsc({ sort: "price", order: "asc" }).then((res) => getDataFromApi(res.data))
+
+    }
+
+    const descending = () => {
+        getDataAscDsc({ sort: "price", order: "desc" }).then((res) => getDataFromApi(res.data))
+    }
 
     return (
         <div>
@@ -25,13 +47,13 @@ const Tshirt = () => {
                 <Box>
                     <Box display="flex" justifyContent="space-between" marginBottom="20px" mt="30px">
                         <Heading ml="180px">T-shirts</Heading>
-                        <Select placeholder='Default' w="250px">
+                        <Select placeholder='Default' w="250px" >
                             <option value='default_sorting'>Default Sorting</option>
                             <option value='sort_by_popularity'>Sort by popularity</option>
                             <option value='sort_by_average_rating'>Sort by average rating</option>
                             <option value='sort_by_latest'>Sort by latest</option>
-                            <option value='sort_by_lth'>Sort by price: low to high</option>
-                            <option value='sort_by_htl'>Sort by price: high to low</option>
+                            <option value='sort_by_lth' onClick={() => ascending()}>Sort by price: low to high</option>
+                            <option value='sort_by_htl' onClick={() => descending()}>Sort by price: high to low</option>
                         </Select>
                     </Box>
                     <Grid templateColumns="repeat(3,1fr)" gap="10px" w="900px" textAlign="center" ml="10px" border="1px solid white" padding="20px">
@@ -42,7 +64,7 @@ const Tshirt = () => {
                                         <img width="300px" height="300px" src={item.image}></img>
                                     </Box>
                                     <Text>{item.name}</Text>
-                                    <Text>{item.price}</Text>
+                                    <Text>₹{item.price}</Text>
                                 </GridItem>
                             </Link>
                         ))}

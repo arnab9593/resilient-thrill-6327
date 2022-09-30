@@ -42,7 +42,7 @@ const SingleProduct = () => {
                     {productDetails && productDetails.map((item) =>
                         <Box>
                             <Text fontSize="27px" fontWeight="800" >{item.name}</Text>
-                            <Text mt="10px" color="#FF6F61" fontSize="25px" fontWeight="500" >{item.price}</Text>
+                            <Text mt="10px" color="#FF6F61" fontSize="25px" fontWeight="500" >₹{item.price}</Text>
                             <Text marginTop="30px">Size</Text>
                             <Select mt="20px" placeholder='Choose An Option' w="250px">
                                 <option value='l'>L</option>
@@ -62,7 +62,7 @@ const SingleProduct = () => {
                             </Box>
                             <Text marginTop="20px">Categories: Clothing</Text>
                             <Box marginTop="20px" display="flex" border="1px solid white" width="200px" justifyContent="space-around">
-                                <Text ml="-1    0px" mt="5px">Share: </Text>
+                                <Text ml="-10px" mt="5px">Share: </Text>
                                 <Image w="30px" h="30px" src="https://cdn-icons-png.flaticon.com/512/4628/4628653.png" alt="fb"></Image>
                                 <Image w="30px" h="30px" src="https://cdn-icons-png.flaticon.com/512/1362/1362857.png" alt="insta"></Image>
                                 <Image w="30px" h="30px" src="https://cdn-icons-png.flaticon.com/512/4628/4628695.png" alt="twitter"></Image>
