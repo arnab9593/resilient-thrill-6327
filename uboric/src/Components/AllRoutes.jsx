@@ -7,6 +7,7 @@ import Categories from "../Pages/Categories";
 import ContactUs from "../Pages/ContactUs";
 import SignIn from "../Pages/SignIn";
 import Tshirt from "../Pages/Tshirt";
+import SingleProduct from "../Pages/SingleProduct";
 
 const AllRoutes = () => {
 
@@ -18,6 +19,7 @@ const AllRoutes = () => {
             <Route path="/tshirt" element={<Tshirt></Tshirt>}></Route>
             <Route path="/contactus" element={<ContactUs></ContactUs>}></Route>
             <Route path="/signin" element={<SignIn></SignIn>}></Route>
+            <Route path='/tshirt/:id' element={<SingleProduct></SingleProduct>}></Route>
         </Routes>
     )
 

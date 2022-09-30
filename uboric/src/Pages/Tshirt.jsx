@@ -4,21 +4,19 @@ import React, { useEffect, useState } from "react";
 import "./CSS/Tshirt.css"
 import Footer from "./Footer"
 import Sidebar from "./Sidebar";
-
-
-const getData = () => {
-    return axios.get("https://intense-journey-23599.herokuapp.com/api/tshirt")
-}
+import { Link } from "react-router-dom";
 
 const Tshirt = () => {
+
+    const getData = () => {
+        return axios.get("https://intense-journey-23599.herokuapp.com/api/tshirt")
+    }
 
     const [data, getDataFromApi] = useState([])
 
     useEffect(() => {
         getData().then((res) => getDataFromApi(res.data))
     }, [])
-
-
 
     return (
         <div>
@@ -38,14 +36,15 @@ const Tshirt = () => {
                     </Box>
                     <Grid templateColumns="repeat(3,1fr)" gap="10px" w="900px" textAlign="center" ml="10px" border="1px solid white" padding="20px">
                         {data.map((item) => (
-                            <GridItem key={item.id} border="1px solid white" className="imgHover" >
-                                <Box w="full" >
-                                    <img width="300px" height="300px" src={item.image}></img>
-                                </Box>
-                                <p>{item.name}</p>
-                                <p>{item.price}</p>
-                            </GridItem>
-
+                            <Link to={`/tshirt/${item.id}`}>
+                                <GridItem key={item.id} border="1px solid white" className="imgHover" >
+                                    <Box w="full" >
+                                        <img width="300px" height="300px" src={item.image}></img>
+                                    </Box>
+                                    <Text>{item.name}</Text>
+                                    <Text>{item.price}</Text>
+                                </GridItem>
+                            </Link>
                         ))}
                     </Grid>
                 </Box>
