@@ -1,0 +1,263 @@
+.hm_fstDiv {
+    /* border: 1px solid black; */
+    height: 440px;
+}
+
+.hm_fstDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+.hp_secondDiv {
+    /* border: 1px solid black; */
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    position: relative;
+    text-align: center;
+}
+
+.txtOnimg1 {
+    position: absolute;
+    top: 60px;
+    left: 130px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.txtOnimg2 {
+    position: absolute;
+    top: 110px;
+    left: 130px;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+
+.txtOnimg3 {
+    position: absolute;
+    top: 60px;
+    left: 550px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.txtOnimg4 {
+    position: absolute;
+    top: 110px;
+    left: 550px;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+
+.txtOnimg5 {
+    position: absolute;
+    top: 80px;
+    left: 960px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+/* .hp_secondDiv p{
+    position: relative;
+    margin-top: -9%;
+  } */
+
+.hp_secondDiv div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: 1px solid red; */
+    height: 300px;
+    width: 400px;
+
+}
+
+.hp_secondDiv div img {
+    transition: transform .5s;
+}
+
+.hp_secondDiv div img:hover {
+    transform: scale(1.1);
+}
+
+.hp_shopByCat {
+    /* border: 1px solid black; */
+    height: 230px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.hp_shopByCat h2 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.hp_shopByCat_link {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #FF7264;
+    text-decoration: underline;
+}
+
+.hp_shopByCat div {
+    /* border: 1px solid black; */
+    width: 1100px;
+    margin: auto auto;
+    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+    margin-top: 27px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.hp_fourDiv {
+    /* border: 1px solid black; */
+    height: 1000px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    padding: 60px;
+    position: relative;
+    text-align: center;
+    /* justify-content: space-evenly; */
+}
+
+.hp_fourDiv div {
+    /* border: 1px solid red; */
+    height: 400px;
+    position: relative;
+    text-align: center;
+}
+
+/* .hp_fourDiv img {
+    height: 100%;
+    width: 100%;
+    
+} */
+
+.hp_fourDiv div img {
+    transition: transform .5s;
+}
+
+.hp_fourDiv div img:hover {
+    transform: scale(1.1);
+}
+
+.txtOn_hpfour1 {
+    position: absolute;
+    top: 327px;
+    left: 17%;
+    font-size: 35px;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #eff0f1;
+    padding: 10px;
+}
+
+.txtOn_hpfour2 {
+    position: absolute;
+    top: 327px;
+    left: 22%;
+    font-size: 35px;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #eff0f1;
+    padding: 10px;
+}
+
+.txtOn_hpfour3 {
+    position: absolute;
+    top: 327px;
+    left: 36%;
+    font-size: 35px;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #eff0f1;
+    padding: 10px;
+}
+
+.txtOn_hpfour4 {
+    position: absolute;
+    top: 327px;
+    left: 37%;
+    font-size: 35px;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #eff0f1;
+    padding: 10px;
+}
+
+.hp_description {
+    /* border: 1px solid black; */
+    width: 1110px;
+    margin: auto auto;
+    text-align: justify;
+    padding: 10px;
+
+}
+
+.hp_description h1 {
+    font-size: 33px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hp_description p {
+    color: #8A8A8A;
+}
+
+.benefitsOfShopping {
+    /* border: 1px solid black; */
+    height: 550px;
+    display: flex;
+    margin-top: 35px;
+}
+
+.benefitsOfShopping1 {
+    /* border: 1px solid red; */
+    width: 50%;
+}
+
+.benefitsOfShopping1 h1 {
+    margin-left: 130px;
+    font-size: 33px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.benefitsOfShopping1 p {
+    margin-left: 130px;
+    line-height: 50px;
+    color: #8A8A8A;
+}
+
+.benefitsOfShopping1 button {
+    margin-left: 128px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.benefitsOfShopping1 button:hover {
+    background-color: #8A8A8A;
+}
+
+.benefitsOfShopping2 {
+    /* border: 1px solid green; */
+    width: 50%;
+}
+
+.benefitsOfShopping2 img{
+    width: 552px;
+    height: 520px;
+}

@@ -1,0 +1,65 @@
+/* .parent{
+    display: flex;
+} 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
+    /* width: 900px; 
+    margin-left: 450px;
+    margin-bottom: 30px;
+}
+
+.tshirt_firstDiv {
+    display: flex;
+    border: 1px solid black;
+    width: 900px;
+    margin-left: 450px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.text {
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+.filter {
+    width: 250px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 0px; 
+    background-color: white;
+}
+
+.container div {
+    text-align: center;
+}
+
+/* .filter-Tshirt {
+    border: 1px solid black;
+    height: 100px;
+    width: 415px;
+} 
+
+.child1{
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    margin-top: 40px;
+}
+/* .child2{
+    border: 1px solid black;
+    height: 500px;
+    width: 900px;
+} */
+
+
+
+.imgHover {
+    transition: transform .5s;
+}
+
+.imgHover:hover {
+    transform: scale(1.1);
+}
