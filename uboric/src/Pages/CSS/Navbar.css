@@ -11,7 +11,7 @@
 }
 
 .secondchild_nav {
-    border: 1px solid black;
+    border: 1px solid #8E8E8E;
     height: 90px;
     display: flex;
     justify-content: space-around;
