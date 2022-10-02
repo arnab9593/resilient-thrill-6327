@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Text, Select, Button } from "@chakra-ui/react";
+import { Flex, Box, Image, Text, Select, Button, useToast } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer"
@@ -12,7 +12,7 @@ const statusFromLS = JSON.parse(sessionStorage.getItem("loginStatus"))
 console.log(statusFromLS);
 
 const SingleProduct = () => {
-
+    const toast = useToast()
     const [qty, setQty] = useState(1)
     const handleInc = () => {
         setQty(qty + 1)
@@ -25,7 +25,12 @@ const SingleProduct = () => {
     const { id } = useParams();
     const [productDetails, setProductDetails] = useState([]);
     const addToCart = () => {
-        alert("Product added to cart")
+        toast({
+            title: 'Added to cart sucessfull',
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+        })
     }
 
     useEffect(() => {

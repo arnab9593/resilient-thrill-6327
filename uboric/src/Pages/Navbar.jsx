@@ -15,7 +15,7 @@ import {
     Button,
     Input,
     Image,
-    Alert
+    useToast
 } from '@chakra-ui/react'
 
 
@@ -32,7 +32,11 @@ const customerDetail = JSON.parse(localStorage.getItem("userData")) || []
 const checkLogin = JSON.parse(sessionStorage.getItem("loginStatus")) || []
 
 const Navbar = () => {
-
+    const toast = useToast()
+    const statuses = ['error']
+    const positions = [
+        'top'
+    ]
     const [text, setText] = React.useState({
         email: "",
         passwd: "",
@@ -100,18 +104,32 @@ const Navbar = () => {
         })
         if (flag) {
             navigate("/")
-            alert("Login Sucessful")
+            toast({
+                title: 'Login Sucessfull.',
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+            })
+
             setTrue(flag)
         }
         else {
-            alert("Incorrect Credentials")
+            toast({
+                title: 'Incorrect Credentials',
+                status: 'error',
+                isClosable: true,
+            })
             setTrue(flag)
         }
     }
 
     const handleLogout = () => {
         sessionStorage.clear()
-        alert("Logout Sucessful")
+        toast({
+            title: `Logout Sucessfull`,
+            position: 'top',
+            isClosable: true,
+        })
     }
 
     const { isOpen, onOpen, onClose } = useDisclosure()
