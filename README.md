@@ -3,4 +3,4 @@
 
 <h3>
  Uboric.com is a website which primarily deals with apperal. It is an e-commerece website. 
- Live link of the website <a href="https://netlify-thinks-fp04376study-gmail-com-is-great-e1d86.netlify.app/" target="_blank"> Here </a>.</h3>
+ Click <a href="https://netlify-thinks-fp04376study-gmail-com-is-great-e1d86.netlify.app/" target="_blank"> here </a> to check the website.</h3>
