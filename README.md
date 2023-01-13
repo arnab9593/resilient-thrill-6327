@@ -26,3 +26,13 @@
   <li>Chakra UI</li>
   <li>Localstorage</li>
 </ol>
+
+<h2>Team Members and Contributors</h2>
+
+<h4>Arnab Pal</h4>
+<ul>
+  <li>Github: arnab9593</li>
+  <li>Github Link:https://github.com/arnab9593</li>
+  <li>Email: arnabpal679@gmail.com</li>
+  <li>LinkedIn:https://www.linkedin.com/in/arnab-pal-71248b155/</li>
+</ul>
